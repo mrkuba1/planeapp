@@ -35,7 +35,6 @@ class FlightOffer {
 
   factory FlightOffer.fromJson(Map<String, dynamic> json) {
     final List<dynamic> itinerariesList = json['itineraries'];
-    final List<dynamic> travelerPricingsList = json['travelerPricings'];
     return FlightOffer(
         type: json['type'],
         id: json['id'],
