@@ -1,5 +1,4 @@
 import 'dart:convert';
-// import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
 
 class Amadeus {
@@ -16,7 +15,6 @@ class Amadeus {
           body:
               "grant_type=client_credentials&client_id=$clientId&client_secret=$clientSecret");
     } catch (e) {
-      // print("error generating token --> $e");
       return "Unable to generate access token due to error $e";
     }
     Map data = jsonDecode(response.body);

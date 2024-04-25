@@ -8,7 +8,6 @@ class Segment {
   final String carrierCode;
   final String number;
   final Aircraft aircraft;
-  // final Operating operating;
   final String duration;
   final String id;
   final int numberOfStops;
@@ -20,7 +19,6 @@ class Segment {
     required this.carrierCode,
     required this.number,
     required this.aircraft,
-    // required this.operating,
     required this.duration,
     required this.id,
     required this.numberOfStops,
@@ -34,7 +32,6 @@ class Segment {
       carrierCode: json['carrierCode'],
       number: json['number'],
       aircraft: Aircraft.fromJson(json['aircraft']),
-      // operating: Operating.fromJson(json['operating']),
       duration: json['duration'],
       id: json['id'],
       numberOfStops: json['numberOfStops'],
@@ -49,7 +46,6 @@ class Segment {
         'carrierCode: $carrierCode, '
         'number: $number, '
         'aircraft: $aircraft, '
-        // 'operating: $operating, '
         'duration: $duration, '
         'id: $id, '
         'numberOfStops: $numberOfStops, '

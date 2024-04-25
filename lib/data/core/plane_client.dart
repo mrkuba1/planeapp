@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:planeapp/amadeus.dart';
+import 'package:planeapp/config/amadeus.dart';
 import 'package:planeapp/data/core/base_client.dart';
 import 'package:planeapp/data/model/flight_offer.dart';
 
@@ -21,7 +21,6 @@ class PlaneClient extends PABaseClient {
       Uri.parse(apiUrl),
       headers: {"Authorization": "Bearer $accessToken"},
     );
-    // print(apiUrl);
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> jsonData = json.decode(response.body);

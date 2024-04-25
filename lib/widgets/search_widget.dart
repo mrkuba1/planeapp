@@ -34,7 +34,6 @@ class _SearchWidgetState extends State<SearchWidget> {
       List<Airport> airportList =
           jsonData.map((json) => Airport.fromJson(json)).toList();
 
-      // Assuming setState is within a StatefulWidget class
       setState(() {
         downloadedAirports = airportList;
       });
@@ -119,14 +118,12 @@ class _SearchWidgetState extends State<SearchWidget> {
                               fontWeight: FontWeight.bold, fontSize: 16),
                         ),
                         const SizedBox(height: 10),
-
                         // SearchWithSuggestionsWidget(
                         //   onSuggestionSelectedCallback: (selectedAirPort) {
                         //     setState(() {});
                         //   },
                         //   airportList: downloadedAirports,
                         // ),
-
                         TextField(
                           controller: departureAirportController,
                           decoration: const InputDecoration(
